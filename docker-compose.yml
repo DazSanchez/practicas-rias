@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  # apache:
+  #   image: php:7.2-apache
+  #   volumes:
+  #     - c:/hsanchez/rias/public_html/unidad2/practica3:/var/www/html/
+  #   ports:
+  #     - "80:80"
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=toor

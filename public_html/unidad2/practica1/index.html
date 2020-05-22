@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pr&aacute;ctica 1</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col">
+          <h2>Conversi&oacute;n</h2>
+          <p>Operaci&oacute;n</p>
+          <form id="conversionForm">
+            <div class="d-flex flex-column">
+              <label>
+                <input checked type="radio" name="scale" value="C" /> °C a °F
+              </label>
+              <label>
+                <input type="radio" name="scale" value="F" /> °F a °C
+              </label>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="input">
+                  Valor de entrada
+                </label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    id="input"
+                    name="input"
+                    pattern="(-)?\d+(\.\d+)?"
+                    title="S&oacute;lo se aceptan n&uacute;meros"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Calcular
+            </button>
+            <button class="btn" type="reset">
+              Limpiar
+            </button>
+          </form>
+        </div>
+        <div class="col">
+          <h2>Selecci&oacute;n de fecha</h2>
+          <div>
+            <label for="input">
+              Seleccione una fecha
+            </label>
+            <div class="input-group">
+              <input id="datepicker" class="form-control" type="date" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <h2>Historial de operaciones</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Acci&oacute;n</th>
+                <th scope="col">Resultado</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/process.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

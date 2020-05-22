@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Formulario</h1>
+
+  <a href="#!/" class="btn btn-link">Volver al inicio</a>
+
+  <form name="calcForm" class="form-inline">
+    <label for="num">Duplicar</label>
+    <input
+      type="number"
+      class="form-control mx-2"
+      ng-model="num"
+      ng-change="double()"
+    />
+
+    <input
+      type="text"
+      class="form-control"
+      readonly="readonly"
+      ng-model="result"
+    />
+  </form>
+</div>

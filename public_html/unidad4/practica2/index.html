@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es-MX" ng-app="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pr&aacute;ctica 2</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <base href="/" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary shadow-sm">
+      <span class="navbar-brand mb-0 h1">AJAX con AngularJS</span>
+    </nav>
+
+    <div class="container pt-3">
+      <div class="card shadow-sm mb-3" ng-controller="FormController">
+        <div class="card-body">
+          <h5 class="card-title">Conversi&oacute;n</h5>
+          <form name="form" novalidate>
+            <div class="row">
+              <div class="form-group col-3">
+                <p class="m-0">Tipo de conversi&oacute;n</p>
+                <div class="form-check">
+                  <input
+                    id="type-1"
+                    type="radio"
+                    name="type"
+                    class="form-check-input"
+                    ng-value="1"
+                    ng-model="conversion.type"
+                  />
+                  <label for="type-1" class="form-check-label">
+                    °C a °F
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="type-2"
+                    type="radio"
+                    name="type"
+                    class="form-check-input"
+                    ng-value="2"
+                    ng-model="conversion.type"
+                  />
+                  <label for="type-2" class="form-check-label">
+                    °C a °K
+                  </label>
+                </div>
+              </div>
+              <div class="form-group col">
+                <label for="value">Valor</label>
+                <input
+                  id="value"
+                  type="number"
+                  name="value"
+                  class="form-control"
+                  placeholder="Ej: 10°C"
+                  ng-model="conversion.value"
+                  ng-required="true"
+                  ng-class="form.value.$invalid && 'is-invalid'"
+                />
+                <div ng-show="form.value.$invalid" class="invalid-feedback">
+                  *Este campo es requerido
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button
+                class="btn btn-primary"
+                type="button"
+                ng-click="convert()"
+                ng-disabled="form.$invalid"
+              >
+                Convertir
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card shadow-sm" ng-controller="TableController">
+        <div class="card-body">
+          <h5 class="card-title">Registro de conversiones</h5>
+
+          <div class="alert alert-info" ng-if="!items.length">
+            No hay registros a&uacute;n
+          </div>
+
+          <table class="table" ng-if="items.length">
+            <thead>
+              <tr>
+                <th scope="col">Conversi&oacute;n</th>
+                <th scope="col">Resultado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="item in items">
+                <th>
+                  {{ item.conversion | temperature }}
+                </th>
+                <td>
+                  {{ item.result | temperature }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.5/rxjs.umd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.7.9/angular-route.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

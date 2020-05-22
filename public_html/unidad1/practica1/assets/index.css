@@ -1,0 +1,63 @@
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.alert {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.alert--error {
+  background-color: #b71c1c;
+  color: #fff;
+}
+
+.alert--success {
+  background-color: #43a047;
+  color: #fff;
+}
+
+.alert__title,
+.alert__message {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.alert__title {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+input[type="color"],
+input[type="file"],
+input[type="date"] {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center {
+  align-items: center;
+}
+
+.h-scroll-table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}

@@ -1,0 +1,28 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+ /*
+     prefHeight="400.0" prefWidth="600.0"
+ */
+ -fx-pref-height: 400;
+ -fx-pref-width: 600;
+}
+
+.main-container {
+    /*alignment="TOP_CENTER" layoutX="7.0" layoutY="7.0" prefHeight="394.0" prefWidth="593.0"*/
+    -fx-alignment: center;
+    -fx-padding: 15px;
+}
+
+.title {
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-font-size: 20;
+    -fx-margin-bottom: 10px;
+}
+
+.input {
+    -fx-pref-width: 150;
+}

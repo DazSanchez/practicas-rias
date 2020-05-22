@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" href="css/spectrum.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <main class="container pt-2">
+      <div class="row">
+        <div class="col col-lg-4">
+          <h2>Registro</h2>
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input
+                class="form-control"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="aPaterno">A. Paterno</label>
+              <input
+                class="form-control"
+                type="text"
+                id="aPaterno"
+                name="aPaterno"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="aMaterno">A. Materno</label>
+              <input
+                class="form-control"
+                type="text"
+                id="aMaterno"
+                name="aMaterno"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="fNacimiento">Fecha de nacimiento</label>
+              <input
+                class="form-control"
+                type="text"
+                id="fNacimiento"
+                name="fNacimiento"
+                required
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-group">
+              <label for="color">Color favorito</label>
+              <input
+                class="form-control"
+                type="text"
+                id="color"
+                name="color"
+                required
+              />
+            </div>
+            <label for="picture">Fotograf&iacute;a</label>
+            <div class="custom-file mb-2">
+              <input
+                class="custom-file-input"
+                type="file"
+                id="picture"
+                name="picture"
+                accept="image/*"
+                required
+              />
+              <label class="custom-file-label" for="picture"></label>
+            </div>
+            <div class="form-group">
+              <label for="aInteres">&Aacute;rea de inter&eacute;s</label>
+              <select
+                name="aInteres"
+                id="aInteres"
+                class="form-control"
+                required
+              >
+                <option value="1">Ciencias exactas</option>
+                <option value="2">Humanidades</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electr&oacute;nico</label>
+              <input
+                class="form-control"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="lorem@hotmail.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Contrase&ntilde;a</label>
+              <input
+                class="form-control"
+                type="password"
+                id="password"
+                name="password"
+                required
+                pattern="\d{2}_[A-Z]{2}\d[a-z]"
+                title="Debe ingresar 2 números, un guión bajo, 2 letras mayúsculas, un número y una letra minúscula"
+              />
+            </div>
+            <div class="form-group">
+              <label for="url">P&aacute;gina web personal</label>
+              <input
+                class="form-control"
+                type="url"
+                id="url"
+                name="url"
+                required
+                placeholder="http://www.google.com"
+              />
+            </div>
+            <label>Pasatiempos</label>
+            <div class="d-flex flex-wrap">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="pst"
+                id="pst-1"
+                value="1"
+              />
+              <label class="form-check-label m-1" for="pst-1">
+                Realizar deportes
+              </label>
+
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="pst"
+                id="pst-2"
+                value="2"
+              />
+              <label class="form-check-label m-1" for="pst-2">
+                Jugar videojuegos
+              </label>
+
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="pst"
+                id="pst-3"
+                value="3"
+              />
+              <label class="form-check-label m-1" for="pst-3">
+                Escuchar m&uacute;sica
+              </label>
+
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="pst"
+                id="pst-4"
+                value="4"
+              />
+              <label class="form-check-label m-1" for="pst-4">
+                Otro
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="fIngreso">
+                Fecha de ingreso a la educaci&oacute;n superior
+              </label>
+              <input
+                class="form-control"
+                type="text"
+                id="fIngreso"
+                name="fIngreso"
+                required
+                autocomplete="off"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Agregar
+            </button>
+          </form>
+        </div>
+        <div class="col col-lg-8 mt-4 mt-lg-0">
+          <h2>Lista de registros</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">A. Paterno</th>
+                  <th scope="col">A. Materno</th>
+                  <th scope="col">Fecha nacimiento</th>
+                  <th scope="col">Color</th>
+                  <th scope="col">Fotograf&iacute;a</th>
+                  <th scope="col">&Aacute;rea de inter&eacute;s</th>
+                  <th scope="col">Correo electr&oacute;nico</th>
+                  <th scope="col">Contrase&ntilde;a</th>
+                  <th scope="col">P&aacute;gina web</th>
+                  <th scope="col">Pasatiempos</th>
+                  <th scope="col">Fecha ingreso</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bs-custom-file-input.min.js"></script>
+    <script src="js/spectrum.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

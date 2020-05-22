@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.hsanchez.javafx.practica_1.controller.RegisterFormController">
+   <children>
+      <VBox id="mainContainer" alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" styleClass="main-container">
+         <children>
+            <Label styleClass="title" text="Formulario de registro">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <FlowPane hgap="15.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Nombre" />
+                        <TextField styleClass="input" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Apellido paterno" />
+                        <TextField styleClass="input" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Apellido Materno" />
+                        <TextField styleClass="input" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </FlowPane>
+            <FlowPane hgap="15.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Fecha de nacimiento" />
+                        <DatePicker styleClass="input" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Color favorito" />
+                        <ColorPicker styleClass="input" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Fotografía" />
+                        <HBox>
+                           <children>
+                              <TextField editable="false" />
+                              <Button mnemonicParsing="false" text="Buscar" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </FlowPane>
+            <FlowPane hgap="15.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Área de interés" />
+                        <ComboBox styleClass="input" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Correo electrónico" />
+                        <TextField styleClass="input" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="176.0" layoutY="10.0">
+                     <children>
+                        <Label text="Contraseña" />
+                        <PasswordField styleClass="input">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </PasswordField>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </FlowPane>
+            <FlowPane hgap="15.0" layoutX="20.0" layoutY="61.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Página web personal" />
+                        <TextField styleClass="input" text="http://" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Pasatiempos" />
+                        <CheckComboBox prefWidth="150.0" styleClass="input" title="- Seleccione -" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label styleClass="input" text="Fecha de ingreso a la educación superior">
+                           <tooltip>
+                              <Tooltip text="Fecha de ingreso a la educación superior" />
+                           </tooltip></Label>
+                        <DatePicker styleClass="input" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </FlowPane>
+            <FlowPane alignment="TOP_RIGHT" prefWidth="600.0">
+               <children>
+                  <Button defaultButton="true" mnemonicParsing="false" text="Guardar" />
+               </children>
+            </FlowPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+        <URL value="@../styles/registerform.css" />
+    </stylesheets>
+</AnchorPane>
