@@ -30,19 +30,19 @@
                   <VBox>
                      <children>
                         <Label text="Nombre" />
-                        <TextField styleClass="input" />
+                        <TextField fx:id="nameInput" styleClass="input" />
                      </children>
                   </VBox>
                   <VBox>
                      <children>
                         <Label text="Apellido paterno" />
-                        <TextField styleClass="input" />
+                        <TextField fx:id="firstSurnameInput" styleClass="input" />
                      </children>
                   </VBox>
                   <VBox>
                      <children>
                         <Label text="Apellido Materno" />
-                        <TextField styleClass="input" />
+                        <TextField fx:id="secondSurnameInput" styleClass="input" />
                      </children>
                   </VBox>
                </children>
@@ -55,13 +55,13 @@
                   <VBox>
                      <children>
                         <Label text="Fecha de nacimiento" />
-                        <DatePicker styleClass="input" />
+                        <DatePicker fx:id="birthdateInput" styleClass="input" />
                      </children>
                   </VBox>
                   <VBox>
                      <children>
                         <Label text="Color favorito" />
-                        <ColorPicker styleClass="input" />
+                        <ColorPicker fx:id="colorInput" styleClass="input" />
                      </children>
                   </VBox>
                   <VBox>
@@ -69,8 +69,8 @@
                         <Label text="Fotografía" />
                         <HBox>
                            <children>
-                              <TextField editable="false" />
-                              <Button mnemonicParsing="false" text="Buscar" />
+                              <TextField fx:id="filenameInput" editable="false" />
+                              <Button fx:id="selectFileBtn" mnemonicParsing="false" onAction="#onSelectFile" text="Buscar" />
                            </children>
                         </HBox>
                      </children>
@@ -85,19 +85,19 @@
                   <VBox>
                      <children>
                         <Label text="Área de interés" />
-                        <ComboBox styleClass="input" />
+                        <ComboBox fx:id="interestInput" styleClass="input" />
                      </children>
                   </VBox>
                   <VBox>
                      <children>
                         <Label text="Correo electrónico" />
-                        <TextField styleClass="input" />
+                        <TextField fx:id="emailInput" styleClass="input" />
                      </children>
                   </VBox>
                   <VBox layoutX="176.0" layoutY="10.0">
                      <children>
                         <Label text="Contraseña" />
-                        <PasswordField styleClass="input">
+                        <PasswordField fx:id="passwordInput" styleClass="input">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
@@ -114,13 +114,13 @@
                   <VBox>
                      <children>
                         <Label text="Página web personal" />
-                        <TextField styleClass="input" text="http://" />
+                        <TextField fx:id="urlInput" styleClass="input" />
                      </children>
                   </VBox>
                   <VBox>
                      <children>
                         <Label text="Pasatiempos" />
-                        <CheckComboBox prefWidth="150.0" styleClass="input" title="- Seleccione -" />
+                        <CheckComboBox fx:id="hobbiesInput" prefWidth="150.0" styleClass="input" title="- Seleccione -" />
                      </children>
                   </VBox>
                   <VBox>
@@ -129,7 +129,7 @@
                            <tooltip>
                               <Tooltip text="Fecha de ingreso a la educación superior" />
                            </tooltip></Label>
-                        <DatePicker styleClass="input" />
+                        <DatePicker fx:id="signUpDateInput" styleClass="input" />
                      </children>
                   </VBox>
                </children>
@@ -139,7 +139,7 @@
             </FlowPane>
             <FlowPane alignment="TOP_RIGHT" prefWidth="600.0">
                <children>
-                  <Button defaultButton="true" mnemonicParsing="false" text="Guardar" />
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#onSave" text="Guardar" />
                </children>
             </FlowPane>
          </children>
