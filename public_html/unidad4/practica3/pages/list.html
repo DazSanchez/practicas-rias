@@ -1,0 +1,32 @@
+<h1>Listado de pacientes</h1>
+
+<div class="row">
+  <div class="col">
+    <a href="#!/" class="btn btn-link">Volver al inicio</a>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">A. Paterno</th>
+      <th scope="col">A. Materno</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in patients track by item.id">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.name }}</td>
+      <td>{{ item.firstSurname }}</td>
+      <td>{{ item.secondSurname }}</td>
+      <td>
+        <button ng-click="open(item)" class="btn btn-outline-primary">
+          Ver detalle
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
